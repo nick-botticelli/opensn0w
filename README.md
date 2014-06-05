@@ -43,3 +43,10 @@ concepts, code, and/or inspiration.
 
 For assistance with opensn0w, please visit #opensn0w on irc.freenode.net. [&#91;Webchat&#93;](http://webchat.freenode.net/?channels=opensn0w)
 
+## 5. GENERAL NOTES
+
+Please do not use opensn0w in any 'wrapper' utilities (ala geeksn0w and such), instead, submit a pull request that makes the core utility better.
+
+Thanks.
+
+(Please also follow GPL licensing for this too.)
