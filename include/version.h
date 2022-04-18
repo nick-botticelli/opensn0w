@@ -19,8 +19,14 @@
 #ifdef _M_X64
 #elif defined _M_IX86
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_I386(msvc)"
+#elif defined _M_X64
+#define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_X64(msvc)"
 #elif defined _M_IA64
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_IA64(msvc)"
+#elif defined _M_ARM64
+#define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_ARM64(msvc)"
+#elif defined _M_ARM
+#define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_ARM(msvc)"
 #elif defined _M_MPPC
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_PPC(msvc)"
 #elif defined _M_MRX000
@@ -33,6 +39,8 @@
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_ALPHA(clang)"
 #elif defined __x86_64__
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_X86_64(clang)"
+#elif defined __aarch64__
+#define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_ARM64(clang)"
 #elif defined __arm__
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_ARM(clang)"
 #elif defined __thumb__
@@ -45,24 +53,32 @@
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_I386(clang)"
 #elif defined __ia64__
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_IA64(clang)"
+#elif defined __loongarch__
+#define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_LOONGARCH(clang)"
 #elif defined __m68k__
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_M68K(clang)"
 #elif defined __mips__
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_MIPS(clang)"
 #elif defined __powerpc__
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_POWERPC(clang)"
+#elif defined __riscv__
+#define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_RISCV(clang)"
 #elif defined __sparc__
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_SPARC(clang)"
 #elif defined __sh__
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_SUPERH(clang)"
 #elif defined __s390__
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_S390(clang)"
+#else
+#define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "GENERIC(clang)"
 #endif
 #elif defined __GNUC__
 #ifdef __alpha__
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_ALPHA(gcc)"
 #elif defined __x86_64__
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_X86_64(gcc)"
+#elif defined __aarch64__
+#define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_ARM64(gcc)"
 #elif defined __arm__
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_ARM(gcc)"
 #elif defined __thumb__
@@ -75,12 +91,16 @@
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_I386(gcc)"
 #elif defined __ia64__
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_IA64(gcc)"
+#elif defined __loongarch__
+#define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_LOONGARCH(gcc)"
 #elif defined __m68k__
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_M68K(gcc)"
 #elif defined __mips__
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_MIPS(gcc)"
 #elif defined __powerpc__
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_POWERPC(gcc)"
+#elif defined __riscv__
+#define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_RISCV(gcc)"
 #elif defined __sparc__
 #define __SN0W_VERSION_FULL__ __SN0W_VERSION__ "/" __SN0W_CONFIG__ "_SPARC(gcc)"
 #elif defined __sh__
